@@ -79,18 +79,48 @@
 
 // in this example we add 2 spans with id in the html file
 
+// const body = document.body;
+// const div = document.querySelector("div");
+// const spanHello = document.querySelector("#first");
+// const spanHi = document.querySelector("#second");
+
+// spanHello.remove();
+// spanHi.remove();
+
+// div.append(spanHi);
+// div.append(spanHello);
+
+// div.removeChild(spanHello);
+// div.removeChild(spanHi);
+
+
+//DISPLAY ATTRIBUTES OF ELEMENT
 const body = document.body;
-const div = document.querySelector("div");
-const spanHello = document.querySelector("#first");
-const spanHi = document.querySelector("#second");
+const div = document.createElement("div");
+const spanOne = document.querySelector("#first");
+const spanTwo = document.querySelector("#second");
+//Printing the span id or title in the console
+//console.log(spanOne.getAttribute('id'));
+console.log(spanOne.title);
+console.log(spanTwo.title);
+console.log(spanOne.id);
+console.log(spanTwo.id);
 
-spanHello.remove();
-spanHi.remove();
+//SETTING ATTRIBUTES OR CHANGING EXISTING ATTRIBUTES VALUES
+console.log(spanOne.setAttribute("title", "newOne"));
+console.log(spanOne.setAttribute("id", "numberOne"));
+console.log(spanTwo.setAttribute("title", "newTwo"));
+console.log(spanTwo.setAttribute("id", "numberTwo"));
 
+//This is another way to set the attribute
+console.log(spanOne.title = 'titleChanged');
+console.log(spanOne.id = "idChanged");
+console.log(spanTwo.title = "titleTwoChanged");
+console.log(spanTwo.id = "idTwoChanged");
 
-div.append(spanHi);
-div.append(spanHello);
+//We can apply the same without printing in the console.log
 
-
-div.removeChild(spanHello);
-div.removeChild(spanHi);
+spanOne.id = "newChangedIdOne";
+spanOne.title = "newChangedTitleOne";
+spanTwo.id = "newChangedIdTwo";
+spanTwo.title = "newChangedTitleTwo";
