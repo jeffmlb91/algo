@@ -30,12 +30,26 @@
 
 
 
-const div = document.querySelector("div");
-// Text content will take the HTML 
-//as is and display the text
-console.log(div.textContent);
+// const div = document.querySelector("div");
+// // Text content will take the HTML 
+// //as is and display the text
+// console.log(div.textContent);
 
-// InnerText looks at the CSS as well as
-// In this case since the span as a 
-// display: none, it will just print the text what's visible,...
-console.log(div.innerText);
+// // InnerText looks at the CSS as well as
+// // In this case since the span as a 
+// // display: none, it will just print the text what's visible,...
+// console.log(div.innerText);
+
+
+// create a variable to store the targeted element
+const body = document.body;
+// create another variable of the object/tag we want to create;
+// use the createElement method to create it.
+const div = document.createElement('div');
+const firstTag = document.createElement('h1');
+//Add a content to the element you created
+div.textContent = "Hey There";
+firstTag.textContent = "This is the big Title";
+//append the element to its parent node
+div.append(firstTag);
+body.append(div);
