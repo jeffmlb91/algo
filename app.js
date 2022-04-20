@@ -55,24 +55,42 @@
 // div.append(firstTag);
 // body.append(div);
 
+// const body = document.body;
+// const div = document.createElement("div");
+// const firstTag = document.createElement("h2");
+// const span = document.createElement("span");
+// const ul = document.createElement('ul');
+
+// //innerHTML will remove the strong tag. This is not safe
+// span.innerHTML = "<strong>Hello Wold </strong>";
+// //span.innerText = "<strong>Hello Wold</strong>";
+
+// //BEST WAY TO DO IT is
+// // const strong = document.createElement("strong");
+// // strong.innerText = "Hello world 2: This is much better";
+
+// firstTag.textContent = "This is a second tag";
+// ul.textContent = "my list";
+// div.append(firstTag);
+// div.append(span);
+// body.append(div);
+
+// REMOVE ELEMENT WITHOUT HIDING THEM
+
+// in this example we add 2 spans with id in the html file
+
 const body = document.body;
-const div = document.createElement("div");
-const firstTag = document.createElement("h2");
-const span = document.createElement("span");
-const ul = document.createElement('ul');
+const div = document.querySelector("div");
+const spanHello = document.querySelector("#first");
+const spanHi = document.querySelector("#second");
+
+spanHello.remove();
+spanHi.remove();
 
 
-//innerHTML will remove the strong tag. This is not safe
-span.innerHTML = "<strong>Hello Wold </strong>";
-//span.innerText = "<strong>Hello Wold</strong>";
+div.append(spanHi);
+div.append(spanHello);
 
-//BEST WAY TO DO IT is
-// const strong = document.createElement("strong");
-// strong.innerText = "Hello world 2: This is much better";
 
-firstTag.textContent = "This is a second tag";
-ul.textContent = "my list";
-div.append(firstTag);
-div.append(span);
-
-body.append(div);
+div.removeChild(spanHello);
+div.removeChild(spanHi);
