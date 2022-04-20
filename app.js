@@ -1,13 +1,13 @@
-const body = document.body;
-const div = document.createElement("div");
-const button = document.createElement("Button");
-body.append(div);
-body.append(button);
-div.innerHTML = "Hey There";
-button.innerHTML = "Click here";
+// const body = document.body;
+// const div = document.createElement("div");
+// const button = document.createElement("Button");
+// body.append(div);
+// body.append(button);
+// div.innerHTML = "Hey There";
+// button.innerHTML = "Click here";
 
-document.querySelector("button").style.background = "Yellow";
-document.querySelector("div").textContent = "Project";
+// document.querySelector("button").style.background = "Yellow";
+// document.querySelector("div").textContent = "Project";
 
 // you can only append child on nodes
 //body.appendChild('Hello')
@@ -27,3 +27,15 @@ document.querySelector("div").textContent = "Project";
 // }
 // number();
 // console.log(number());
+
+
+
+const div = document.querySelector("div");
+// Text content will take the HTML 
+//as is and display the text
+console.log(div.textContent);
+
+// InnerText looks at the CSS as well as
+// In this case since the span as a 
+// display: none, it will just print the text what's visible,...
+console.log(div.innerText);
