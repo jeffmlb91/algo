@@ -124,3 +124,10 @@ spanOne.id = "newChangedIdOne";
 spanOne.title = "newChangedTitleOne";
 spanTwo.id = "newChangedIdTwo";
 spanTwo.title = "newChangedTitleTwo";
+
+//REMOVING ATTRIBUTES
+
+spanOne.removeAttribute('id');
+spanTwo.removeAttribute('id');
+spanOne.removeAttribute('title');
+spanTwo.removeAttribute('title');
